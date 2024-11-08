@@ -1,18 +1,18 @@
-import { FaArrowRight } from "react-icons/fa"
-import { Link } from "react-router-dom"
+import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import React, { useEffect } from "react";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import Banner from "../assets/Images/banner1.mp4"
-import Footer from "../components/common/Footer"
-import ReviewSlider from "../components/common/ReviewSlider"
-import CTAButton from "../components/core/HomePage/Button"
-import CodeBlocks from "../components/core/HomePage/CodeBlocks"
-import ExploreMore from "../components/core/HomePage/ExploreMore"
-import HighlightText from "../components/core/HomePage/HighlightText"
-import InstructorSection from "../components/core/HomePage/InstructorSection"
-import LearningLanguageSection from "../components/core/HomePage/LearningLanguageSection"
-import TimelineSection from "../components/core/HomePage/TimelineSection"
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Banner from "../assets/Images/banner1.mp4";
+import Footer from "../components/common/Footer";
+import ReviewSlider from "../components/common/ReviewSlider";
+import CTAButton from "../components/core/HomePage/Button";
+import CodeBlocks from "../components/core/HomePage/CodeBlocks";
+import ExploreMore from "../components/core/HomePage/ExploreMore";
+import HighlightText from "../components/core/HomePage/HighlightText";
+import InstructorSection from "../components/core/HomePage/InstructorSection";
+import LearningLanguageSection from "../components/core/HomePage/LearningLanguageSection";
+import TimelineSection from "../components/core/HomePage/TimelineSection";
 
 function Home() {
   useEffect(() => {
@@ -27,7 +27,10 @@ function Home() {
       <div className="relative mx-auto flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 text-white">
         {/* Become a Instructor Button */}
         <Link to={"/signup"}>
-          <div  data-aos="zoom-in" className="group mx-auto mt-16 w-fit rounded-full bg-richblack-800 p-1 font-bold text-richblack-200 drop-shadow-[0_1.5px_rgba(255,255,255,0.25)] transition-all duration-200 hover:scale-95 hover:drop-shadow-none">
+          <div
+            data-aos="zoom-in"
+            className="group mx-auto mt-16 w-fit rounded-full bg-richblack-800 p-1 font-bold text-richblack-200 drop-shadow-[0_1.5px_rgba(255,255,255,0.25)] transition-all duration-200 hover:scale-95 hover:drop-shadow-none"
+          >
             <div className="flex flex-row items-center gap-2 rounded-full px-10 py-[5px] transition-all duration-200 group-hover:bg-richblack-900">
               <p>Become an Educator</p>
               <FaArrowRight />
@@ -36,17 +39,26 @@ function Home() {
         </Link>
 
         {/* Heading */}
-        <div data-aos="fade-right" className="text-center text-4xl font-semibold">
-          Empower Your Future with
+        <div
+          data-aos="fade-right"
+          className="text-center text-4xl font-semibold"
+        >
+          Elevate Your Learning Journey with StudyVerse
           <HighlightText text={"Coding Skills"} />
         </div>
 
         {/* Sub Heading */}
-        <div  data-aos="fade-left" className="-mt-3 w-[90%] text-center text-lg font-bold text-richblack-300">
-          With our online coding courses, you can learn at your own pace, from
-          anywhere in the world, and get access to a wealth of resources,
-          including hands-on projects, quizzes, and personalized feedback from
-          instructors.
+        <div
+          data-aos="fade-left"
+          className="-mt-3 w-[90%] text-center text-lg font-bold text-richblack-300"
+        >
+          With StudyVerse, dive into a world of curated study materials and
+          interactive discussions that empower you to learn at your own pace
+          from anywhere. Access a comprehensive library, including notes,
+          practice questions, and in-depth discussions with peers and experts.
+          Enhance your understanding through real-time collaboration tools and
+          personalized guidance, designed to help you reach your academic and
+          professional goals in a supportive learning community.
         </div>
 
         {/* CTA Buttons */}
@@ -60,7 +72,7 @@ function Home() {
         </div>
         <div className=" flex  flex-row gap-7 lg:hidden xl:hidden md:hidden ">
           <CTAButton active={true} linkto={"/signup"}>
-           Signup
+            Signup
           </CTAButton>
           <CTAButton active={false} linkto={"/login"}>
             login
@@ -68,12 +80,11 @@ function Home() {
         </div>
 
         {/* Video */}
-        <div data-aos="flip-right"className="mx-3 my-7 shadow-[10px_-5px_50px_-5px] shadow-blue-200">
-          <video
-            muted
-            loop
-            autoPlay
-          >
+        <div
+          data-aos="flip-right"
+          className="mx-3 my-7 shadow-[10px_-5px_50px_-5px] shadow-blue-200"
+        >
+          <video muted loop autoPlay>
             <source src={Banner} type="video/mp4" />
           </video>
         </div>
@@ -113,7 +124,10 @@ function Home() {
           <CodeBlocks
             position={"lg:flex-row-reverse"}
             heading={
-              <div data-aos="fade-left" className="w-[100%] text-4xl font-semibold lg:w-[50%]">
+              <div
+                data-aos="fade-left"
+                className="w-[100%] text-4xl font-semibold lg:w-[50%]"
+              >
                 Start
                 <HighlightText text={"coding in seconds"} />
               </div>
@@ -203,7 +217,7 @@ function Home() {
       {/* Footer */}
       <Footer />
     </>
-  )
+  );
 }
 
 export default Home;
